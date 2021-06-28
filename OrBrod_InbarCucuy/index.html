@@ -1,0 +1,139 @@
+﻿<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+     <!--CSS 
+    <link href="styles/reset.css" rel="stylesheet" />
+    <link href="styles/myStyle.css" rel="stylesheet" />
+
+
+     Scripts 
+    <script src="jScripts/jquery-1.12.0.min.js"></script>
+    <script src="jScripts/JavaScript.js"></script>-->
+
+</head>
+<body>
+
+    <div id="container" dir="rtl">
+
+        <!--<form action="Default.aspx" method="get" id="form">
+            <input id="Hidden1" type="hidden" name="actID" />
+        </form>-->
+        <header>
+            <!--אודות ולוגו-->
+            <ul>
+                <li><img src="Images/HIT.png" width="40" height="30" /></li>
+                <li><a class="about">אודות</a></li>
+            </ul>
+
+            <!--<input id="ShowMorning" type="button" value="button" />-->
+            <!--תפריט עליון-->
+            <!--<ul>
+                <li> <input class="buttons" id="morningAct" type="button" value="פעילות בוקר" onclick="morningAct()" /></li>
+                <li><input class="buttons" id="dayClose" type="button" value="פעילויות סיכום יום" onclick="dayClose()" /></li>
+                <li><input class="buttons" id="group" type="button" value="פעילויות קבוצה" onclick="groupAct()" /></li>
+                <li><input class="buttons" id="pzh" type="button" value="פז'ח" onclick="pzhAct()" /></li>
+                <li><input class="buttons" id="otef" type="button" value="עוטף" onclick="groupAct()" /></li>
+
+
+            </ul>-->
+
+        </header>
+        <div id="aboutDiv" class="popUp bounceInDown hide">
+            <a class="closeAbout">X</a>
+            <p>
+                אפיון ופיתוח: אור ברוד וענבר קוקוי
+                <br />
+                אופיון ופותח במסגרת פרוייקט בקורס:
+                <br />
+                תכנות 3
+                <br />
+                תשפ"א
+                <br />
+                <img id="logoHIT" src="Images/HITlogo.jpg" />
+                <br />
+                <a href="https://www.hit.ac.il/telem/overview"> הפקולטה לטכנולוגיות למידה</a>
+                <br />
+                המכון הטכנולוגי חולון
+            </p>
+        </div>
+        <div id="headLine"></div>
+        <!--דיבים הכילים בתוכם את הפעולות-->
+        <div id="allActionsDiv"></div>
+        <div id="actionsAfterFilter"></div>
+        <div id="welcome"></div>
+
+        <!--צק בוקס לבחירת המשתמש-->
+
+        <input class="accordion" id="populationBtn" type="button" value="אפיון אוכלוסייה" />
+        <div id="popluation" class="panel">
+            <input class="checkboxs" id="2" type="checkbox" />ראיה
+            <br />
+            <input class="checkboxs" id="1" type="checkbox" />שמיעה
+            <br />
+            <input class="checkboxs" id="4" type="checkbox" />אוטיזם
+            <br />
+            <input class="checkboxs" id="3" type="checkbox" />מש"ה
+            <br />
+            <input class="checkboxs" id="8" type="checkbox" />בעיות התנהגות
+            <br />
+            <input class="checkboxs" id="5" type="checkbox" />לקויות למידה רב בעייתי
+            <br />
+            <input class="checkboxs" id="6" type="checkbox" />עצמאי
+            <br />
+            <input class="checkboxs" id="7" type="checkbox" />פלסטינאים
+            <br />
+            <input class="checkboxs" id="9" type="checkbox" />פוסט אישפוזי
+            <br />
+            <input class="checkboxs" id="10" type="checkbox" />פסיכיאטרי
+            <br />
+            <input class="checkboxs" id="11" type="checkbox" />משפחות
+            <br />
+
+        </div>
+
+        <input class="accordion" id="agesBtn" type="button" value="גיל" />
+        <div id="ages" class="panel">
+            <input class="checkboxs" id="17" type="checkbox" />9-12
+            <br />
+            <input class="checkboxs" id="18" type="checkbox" />13-15
+            <br />
+            <input class="checkboxs" id="19" type="checkbox" />16-18
+        </div>
+
+        <input class="accordion" id="extra" type="button" value="סינונים נוספים" />
+        <div id="extraCategory" class="panel">
+            <input class="checkboxs" id="20" type="checkbox" />הגבלת תזונה
+            <br />
+            <input class="checkboxs" id="21" type="checkbox" />הנמכה קוגניטיבית
+            <br />
+            <input class="checkboxs" id="22" type="checkbox" />כסאות גלגלים
+            <br />
+            <input class="checkboxs" id="23" type="checkbox" />מורכבות בתקשורת
+            <br />
+            <input class="checkboxs" id="24" type="checkbox" />מוגבלות פיזית
+            <br />
+            <input class="checkboxs" id="25" type="checkbox" />מחלות נוספות
+        </div>
+        <br />
+        <input id="filter" type="button" value="סנן" onclick="getData()" />
+        <input class="buttons" id="addNewAct" type="button" value="הוספת פעולה" onclick="newActClick()" />
+        <div id="popUpAct" class="popUpDiv">
+            שם הפעולה: <input id="actName" type="text" />
+            <br />
+
+            <!--<a href="newAct.html"><button>המשך</button></a>-->
+
+
+        </div>
+    </div>
+
+
+</body>
+</html>
